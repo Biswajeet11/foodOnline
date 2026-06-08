@@ -22,7 +22,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = config('SECRET_KEY')
-# 'django-insecure-o_(^h*7xdsj9g#+(cr_-czbb2wk-wy9byh@d@z-atfthbu=!cd'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG',cast=bool)
@@ -39,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'accounts'
 ]
 
 MIDDLEWARE = [
@@ -84,6 +84,8 @@ DATABASES = {
     }
 }
 
+AUTH_USER_MODEL = 'accounts.User'
+
 
 # Password validation
 # https://docs.djangoproject.com/en/6.0/ref/settings/#auth-password-validators
@@ -127,5 +129,5 @@ STATICFILES_DIRS = [
 ]
 
 # Media files configuration
-MEDIA_URL = '/media/'
+MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR /'media'
