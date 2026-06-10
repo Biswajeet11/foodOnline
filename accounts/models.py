@@ -39,10 +39,10 @@ class UserManager(BaseUserManager):
 #By extending the abstract user or by inheriting this abstract base user, we are taking the full control of editing the whole custom user model
 #including the authentication functionality of Django 
 class User(AbstractBaseUser):
-    RESTAURANT = 1
+    VENDOR = 1
     CUSTOMER = 2
 
-    ROLE_CHOICE = ((RESTAURANT,'Restaurant'),(CUSTOMER,'Customer'))
+    ROLE_CHOICE = ((VENDOR,'VENDOR'),(CUSTOMER,'Customer'))
 
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
