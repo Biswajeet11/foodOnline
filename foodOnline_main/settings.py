@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'accounts',
-    'vendor'
+    'vendor',
+    'menu'
 ]
 
 MIDDLEWARE = [
@@ -66,7 +67,6 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'accounts.context_processor.get_vendor',
-                'accounts.context_processor.get_google_api',
             ],
         },
     },
